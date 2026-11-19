@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregunta 1 - Crear la pecera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="barra">
+    <a href="index.html">&larr; Volver al acuario</a>
+    <span class="marca">Acuario GTICS</span>
+</div>
+
+<div class="contenido">
+    <span class="etiqueta">Pregunta 1 · DOM API</span>
+    <h1>Crear la pecera</h1>
+    <p class="indicacion">Elige el tamaño de la pecera y presiona el botón.</p>
+
+    <div class="controles">
+        <label for="dimension">Dimensión (x):</label>
+        <input type="number" id="dimension" min="1" max="20" value="6">
+        <button class="boton" onclick="crearPecera(document.getElementById('dimension').value)">Crear pecera</button>
+    </div>
+
+    <div class="acuario">
+        <div class="alga" style="left: 14px; height: 60px;"></div>
+        <div class="alga clara" style="left: 26px; height: 40px;"></div>
+        <div class="alga" style="right: 18px; height: 50px;"></div>
+        <div id="pecera"></div>
+        <div class="arena"></div>
+    </div>
+</div>
+
+<script src="js/pecera.js"></script>
+<script>
+    crearPecera(6);
+</script>
+</body>
+</html>

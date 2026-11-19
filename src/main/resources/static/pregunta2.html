@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregunta 2 - Nemo y Dory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="barra">
+    <a href="index.html">&larr; Volver al acuario</a>
+    <span class="marca">Acuario GTICS</span>
+</div>
+
+<div class="contenido">
+    <span class="etiqueta">Pregunta 2 · Web Storage API</span>
+    <h1>Nemo y Dory</h1>
+    <p class="indicacion">Ayuda a Nemo y Dory a contar los peces que ven pasar.</p>
+
+    <div class="acuario acuario-grande">
+        <div class="alga" style="left: 14px; height: 90px;"></div>
+        <div class="alga clara" style="left: 28px; height: 60px;"></div>
+        <div class="alga" style="right: 20px; height: 80px;"></div>
+        <div class="alga clara" style="right: 34px; height: 50px;"></div>
+
+        <div id="pecera"></div>
+        <div class="arena"></div>
+
+        <div class="zona" id="zonaNemo">
+            <span class="nombre-pez">Nemo</span>
+            <img class="pez" src="img/nemo.png" alt="Nemo" draggable="false">
+            <span class="contador" id="contadorNemo">0</span>
+            <button class="boton boton-nemo" onclick="sumarNemo()">¡Vi un pez!</button>
+        </div>
+
+        <div class="zona" id="zonaDory">
+            <span class="nombre-pez">Dory</span>
+            <img class="pez" src="img/dory.png" alt="Dory" draggable="false">
+            <span class="contador" id="contadorDory">0</span>
+            <button class="boton boton-dory" onclick="sumarDory()">¡Vi un pececito!</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/pecera.js"></script>
+<script src="js/memoria.js"></script>
+<script>
+    crearPecera(8);
+    iniciarMemoria();
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregunta 3 - Burbujas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="barra">
+    <a href="index.html">&larr; Volver al acuario</a>
+    <span class="marca">Acuario GTICS</span>
+</div>
+
+<div class="contenido">
+    <span class="etiqueta">Pregunta 3 · Drag and Drop API</span>
+    <h1>Burbujas</h1>
+    <p class="indicacion">Arrastra cada burbuja hasta su pez. Si la sueltas en el lugar equivocado, vuelve arriba.</p>
+
+    <div class="leyenda">
+        <span><span class="punto" style="background: #ff8c42;"></span>Burbuja de Nemo</span>
+        <span><span class="punto" style="background: #3d8bfd;"></span>Burbuja de Dory</span>
+    </div>
+
+    <div class="acuario acuario-grande">
+        <div class="alga" style="left: 14px; height: 90px;"></div>
+        <div class="alga clara" style="left: 28px; height: 60px;"></div>
+        <div class="alga" style="right: 20px; height: 80px;"></div>
+        <div class="alga clara" style="right: 34px; height: 50px;"></div>
+
+        <div id="pecera"></div>
+        <div class="arena"></div>
+
+        <div id="superficie"></div>
+
+        <div class="zona" id="zonaNemo">
+            <span class="nombre-pez">Nemo</span>
+            <img class="pez" src="img/nemo.png" alt="Nemo" draggable="false">
+            <span class="contador" id="contadorNemo">0</span>
+        </div>
+
+        <div class="zona" id="zonaDory">
+            <span class="nombre-pez">Dory</span>
+            <img class="pez" src="img/dory.png" alt="Dory" draggable="false">
+            <span class="contador" id="contadorDory">0</span>
+        </div>
+    </div>
+</div>
+
+<script src="js/pecera.js"></script>
+<script src="js/burbujas.js"></script>
+<script>
+    crearPecera(8);
+    iniciarBurbujas();
+</script>
+</body>
+</html>
